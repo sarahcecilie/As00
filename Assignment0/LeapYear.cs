@@ -5,7 +5,7 @@ namespace doAssignment0
     public class LeapYear
     {
         public static void Main(string[] args){
-           
+           Console.WriteLine("Hello world!");
         }
            public bool isLeapYear(int year){
                 if(year % 4 == 0){
