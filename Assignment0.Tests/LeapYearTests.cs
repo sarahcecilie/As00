@@ -20,6 +20,17 @@ namespace Assignment0.Tests
 
         [Fact]
 
+        public void leapYear_is_false_when_divided_by_4()
+        {
+            var output = false;
+
+            output = LeapYear.isLeapYear(1990);
+
+            Assert.False(output);
+        }
+
+        [Fact]
+
         public void leapYear_is_false_when_divided_by_100()
         {
             var output = false;
