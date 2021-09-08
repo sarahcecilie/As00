@@ -8,6 +8,7 @@ namespace Assignment0.Tests
     public class LeapYearTests
     {
         [Fact]
+
         public void leapYear_is_true_when_divided_by_4()
         {
             var output = false;
@@ -18,6 +19,7 @@ namespace Assignment0.Tests
         }
 
         [Fact]
+
         public void leapYear_is_false_when_divided_by_100()
         {
             var output = false;
@@ -28,6 +30,7 @@ namespace Assignment0.Tests
         }
 
         [Fact]
+      
         public void leapYear_is_true_when_divided_by_400()
         {
             var output = false;
