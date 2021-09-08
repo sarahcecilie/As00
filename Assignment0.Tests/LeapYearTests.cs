@@ -20,6 +20,17 @@ namespace Assignment0.Tests
 
         [Fact]
 
+        public void leapYear_is_false_when_divided_by_4()
+        {
+            var output = false;
+
+            output = LeapYear.isLeapYear(1990);
+
+            Assert.False(output);
+        }
+
+        [Fact]
+
         public void leapYear_is_false_when_divided_by_100()
         {
             var output = false;
@@ -70,6 +81,37 @@ namespace Assignment0.Tests
 
             var output = writer.GetStringBuilder().ToString().Trim();
             Assert.Equal("nay", output);
+        }
+
+        [Fact]
+
+        public void leapYear_error_message_is_printed_by_wrong_year()
+        {
+            var input = new StringReader("1500");
+            Console.SetIn(input);
+
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+
+            LeapYear.Main(new string[0]);
+
+            var output = writer.GetStringBuilder().ToString().Trim();
+            Assert.Equal("Please enter a year from 1582 and beyond!", output);
+        }
+
+        [Fact]
+        public void leapYear_error_message_is_printed_by_not_int()
+        {
+            var input = new StringReader("twothousand");
+            Console.SetIn(input);
+
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+
+            LeapYear.Main(new string[0]);
+
+            var output = writer.GetStringBuilder().ToString().Trim();
+            Assert.Equal("Please enter a four digit number!", output);
         }
     }
 }
