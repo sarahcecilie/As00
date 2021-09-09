@@ -15,7 +15,7 @@ namespace Assignment0.Tests
 
             output = LeapYear.isLeapYear(1992);
 
-            Assert.True(output);
+            Assert.Equal(true, output);
         }
 
         [Fact]
@@ -24,9 +24,9 @@ namespace Assignment0.Tests
         {
             var output = false;
 
-            output = LeapYear.isLeapYear(1990);
+            output = LeapYear.isLeapYear(1985);
 
-            Assert.False(output);
+            Assert.Equal(false, output);
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace Assignment0.Tests
 
             output = LeapYear.isLeapYear(1900);
 
-            Assert.False(output);
+            Assert.Equal(false, output);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace Assignment0.Tests
 
             output = LeapYear.isLeapYear(2000);
 
-            Assert.True(output);
+            Assert.Equal(true, output);
         }
 
         [Fact]
