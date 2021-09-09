@@ -5,7 +5,6 @@ namespace doAssignment0
     public class LeapYear
     {
         public static void Main(string[] args){
-           //Console.WriteLine("Hello World!");
            try{ 
             int input = Convert.ToInt32(Console.ReadLine());
                 if(isLeapYear(input) == true){
