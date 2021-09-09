@@ -24,7 +24,7 @@ namespace Assignment0.Tests
         {
             var output = false;
 
-            output = LeapYear.isLeapYear(1990);
+            output = LeapYear.isLeapYear(1985);
 
             Assert.Equal(false, output);
         }
